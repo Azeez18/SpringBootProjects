@@ -19,9 +19,9 @@ public class DemoController {
         return message;
     }
 
-    @GetMapping("/new/{name}")
-    public String welcomeMessageNew(@PathVariable String name) {
+    @GetMapping("/new/{name}/{city}")
+    public String welcomeMessageNew(@PathVariable String name, @PathVariable String city) {
         //append URL
-        return "Hello PathVariable "+name;
+        return "Hello PathVariable "+name+" and my city "+city;
     }
 }
