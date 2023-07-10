@@ -4,6 +4,8 @@ package demo;
 import com.smartsheet.api.models.Attachment;
 import com.smartsheet.api.models.PagedResult;
 
+import java.util.List;
+
 public class BDSSmartSheetDataModel {
 
     private Long bdsSmartSheetId;
@@ -11,9 +13,9 @@ public class BDSSmartSheetDataModel {
 
     private String bdsSmartSheetName;
 
-    private PagedResult<Attachment> bdsAttachmentDetails;
+    private List<BDSAttachments> bdsAttachmentDetails;
 
-    public BDSSmartSheetDataModel(Long bdsSmartSheetId, String bdsNumber, String bdsSmartSheetName, PagedResult<Attachment> bdsAttachmentDetails) {
+    public BDSSmartSheetDataModel(Long bdsSmartSheetId, String bdsNumber, String bdsSmartSheetName, List<BDSAttachments> bdsAttachmentDetails) {
         this.bdsSmartSheetId = bdsSmartSheetId;
         this.bdsNumber = bdsNumber;
         this.bdsSmartSheetName = bdsSmartSheetName;
@@ -44,11 +46,11 @@ public class BDSSmartSheetDataModel {
         this.bdsSmartSheetName = bdsSmartSheetName;
     }
 
-    public PagedResult<Attachment> getBdsAttachmentDetails() {
+    public List<BDSAttachments> getBdsAttachmentDetails() {
         return bdsAttachmentDetails;
     }
 
-    public void setBdsAttachmentDetails(PagedResult<Attachment> bdsAttachmentDetails) {
+    public void setBdsAttachmentDetails(List<BDSAttachments> bdsAttachmentDetails) {
         this.bdsAttachmentDetails = bdsAttachmentDetails;
     }
 }
